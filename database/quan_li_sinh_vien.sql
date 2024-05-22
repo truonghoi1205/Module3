@@ -65,3 +65,23 @@ on student.s_id = mark.s_id
 join subject 
 on subject.sub_id = mark.sub_id
 order by mark desc, s_name;
+
+
+/*Hiển thị tất cả các thông tin môn học (bảng subject) có credit lớn nhất.*/
+select * 
+from subject
+where credit = (select max(credit) from subject);
+
+/*Hiển thị các thông tin môn học có điểm thi lớn nhất.*/
+select mark.sub_id,sub_name, credit,mark from subject 
+join mark
+on mark.sub_id = subject.sub_id
+where mark = (select max(mark) from mark);
+
+/*Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần*/
+select s_name, address, phone, status, avg(mark.mark) as diem_trung_binh
+from student 
+join mark  
+on student.s_id = mark.s_id
+group by s_name,address,phone,status
+order by diem_trung_binh desc;
