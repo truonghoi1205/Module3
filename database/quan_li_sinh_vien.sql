@@ -57,7 +57,7 @@ select * from class where month(start_date) = 12;
 /*Hiển thị tất cả các thông tin môn học có credit trong khoảng từ 3-5.*/
 select * from subject where credit between 3 and 5;
 /*Thay đổi mã lớp(ClassID) của sinh viên có tên ‘Hung’ là 2.*/
-update student set c_id = 2 where s_id = 1;
+update student set c_id = 2 where s_name = 'Hung' ;
 /*Hiển thị các thông tin: StudentName, SubName, Mark. Dữ liệu sắp xếp theo điểm thi (mark) giảm dần. nếu trùng sắp theo tên tăng dần.*/
 select s_name, sub_name, mark from student
 join mark 

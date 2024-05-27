@@ -1,0 +1,397 @@
+.navbar a {
+    text-decoration: none;
+    color: black;
+    opacity: 80%;
+}
+
+.h-logo {
+    width: 250px;
+    height: 50px;
+}
+
+.h-action i {
+    font-size: 18px;
+}
+
+
+
+.h-logo img {
+    max-width: 310px;
+    height: auto;
+    display: inline-block;
+    margin-block: -125px;
+    margin-inline-start: -45px;
+    filter: brightness(0.9)
+}
+
+.navbar ul {
+    display: flex;
+
+}
+
+.h-navbar-link {
+    margin: 0 20px;
+    font-size: 19px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    max-width: 1140px;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.m-background {
+    background-image: url(Section.jpg);
+    width: 100%;
+    margin: auto;
+    padding: 80px 0 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1540px;
+}
+
+.m-container {
+    margin: auto;
+    max-width: 1140px;
+    width: 100%;
+}
+
+.m-h1-text {
+    margin-top: 220px;
+    font-size: 65px;
+    color: #fff;
+    max-width: 600px;
+}
+
+.m-h5-text {
+    font-size: 15px;
+    margin: 10px 0 10px;
+    color: #fff;
+    max-width: 600px;
+    letter-spacing: 1.2px;
+    line-height: 24px;
+}
+
+.m-button-background {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    padding: 10px 50px;
+    border: none;
+    margin-bottom: 150px;
+    margin-top: 10px;
+    border-radius: 4.8px;
+    background-color: #fff;
+    color: #000;
+}
+
+.fa-solid,
+fa-user {
+    margin-right: 15px;
+}
+
+.trademark {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1140px;
+    width: 100%;
+}
+
+.hover-abc img {
+    transition: 0.5s;
+}
+
+.hover-abc:hover img {
+    transform: scale(1.2);
+}
+
+.product-title {
+    margin-top: 25px;
+    font-size: 28px;
+    text-align: center;
+    color: #2c2c2c;
+}
+
+.product-slider-img img {
+    transition: 0.3s;
+    margin: 0 auto;
+    max-height: 200px;
+}
+
+.product-slider-img:hover img {
+    transform: scale(1.02);
+}
+
+.product-slider-img {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 8px;
+    margin: 0 15px;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.product-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1140px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.abc-left {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    border: none;
+    background: none;
+    font-size: 20px;
+}
+
+.abc-right {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    border: none;
+    background: none;
+    z-index: 999999;
+    font-size: 20px;
+}
+
+.product-line {
+    max-width: 100px;
+    color: #000;
+    margin-top: 10px;
+}
+
+.brand-name {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.brand-name name {
+    margin-top: 20px;
+}
+
+.product-name a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.product-name {
+    margin: 13px 0;
+}
+
+.name {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.m-background-section {
+    background-image: url(Section2.jpg);
+    width: 100%;
+    margin: auto;
+    background-repeat: round;
+    background-size: cover;
+    max-width: 1540px;
+}
+
+.m-h3-text {
+    padding-top: 180px;
+    margin-top: 50px;
+    font-size: 30px;
+    color: #fff;
+    max-width: 600px;
+}
+
+.m-button {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    padding: 7px 20px;
+    border: none;
+    margin-bottom: 220px;
+    margin-top: 7px;
+    border-radius: 4.8px;
+    background-color: #fff;
+    color: #000;
+}
+
+
+.m-container-tail {
+    display: flex;
+}
+
+.left {
+    background-image: url(Frame-6-4.jpg.jpg);
+    max-width: 546px;
+    margin: 50px 30px 0 0;
+    background-repeat: no-repeat;
+}
+
+.right {
+    background-image: url(Frame-6-5.jpg.jpg);
+    width: 546px;
+    margin: 50px 0 0 20px;
+    background-repeat: no-repeat;
+}
+
+.box-content {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    background-color: #fff;
+    max-width: 546px;
+    margin: 370px 40px 0;
+    padding: 35px;
+}
+
+.tail-h3-text {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tail-h5-text {
+    font-weight: lighter;
+    letter-spacing: 1.1px;
+    margin-bottom: 10px;
+    line-height: 24px;
+}
+
+.tail-content-button {
+    color: #fff;
+    background-color: #000;
+    padding: 12px;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.m-faq-text {
+    text-align: center;
+    margin: 80px 0;
+    font-size: 40px;
+    font-weight: lighter;
+
+}
+
+.m-faq-query {
+    line-height: 70px;
+    max-width: 1140px;
+    width: 100%;
+    padding: 10px 0;
+    margin: auto;
+    border-top: 1px solid #d1d1d1;
+}
+
+.query {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.fa-chevron-down {
+    color: #707070;
+    font-size: 15px;
+}
+
+.main {
+    margin-bottom: 80px;
+}
+
+.footer {
+    background-color: #F0F0F0;
+    padding: 50px;
+}
+
+.f-icon {
+    display: flex;
+    font-size: 20px;
+    margin-top: 39px;
+}
+
+.icon a {
+    color: #000;
+    margin-right: 15px  
+}
+
+.f-container {
+    display: flex;
+}
+
+.f-logo {
+    margin-inline: -67px;
+    margin-block: -112px;
+}
+
+.f-logo img {
+    max-width: 290px;
+    height: auto;
+}
+
+.f-text p {
+    max-width: 320px;
+    font-size: 16px;
+    line-height: 30px;
+    opacity: 60%;
+}
+
+
+.f-support a {
+    color: #000;
+    opacity: 60%;
+    font-size: 16px;
+}
+
+.f-support p {
+    font-weight: 550;
+    opacity: 80%;
+    letter-spacing: 2px;
+}
+
+.f-support {
+    line-height: 43px;
+    margin-top: 13px;
+    margin-left: 143px;
+    font-size: 17px;
+}
+
+.f-support p {
+    font-weight: 550;
+    opacity: 80%;
+    letter-spacing: 2px;
+}
+
+.f-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-end: -15px;
+    margin-top: 15px;
+}
+
+.f-container-line {
+    margin: auto;
+    max-width: 1140px;
+    border-top: 2px solid #00000037;
+    margin-top: 50px;
+}
+
+.img-bank {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.f-line p {
+    opacity: 60%;
+    font-size: 12px;
+}
