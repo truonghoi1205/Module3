@@ -29,7 +29,6 @@
                 <div>
                     <h2>
                         <a href="/users?action=create">Add New User</a>
-
                     </h2>
                 </div>
             </div>

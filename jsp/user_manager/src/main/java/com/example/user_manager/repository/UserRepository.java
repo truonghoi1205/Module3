@@ -1,9 +1,7 @@
 package com.example.user_manager.repository;
 
 import com.example.user_manager.models.User;
-import com.sun.scenario.effect.impl.prism.ps.PPSBlend_ADDPeer;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -27,7 +25,6 @@ public class UserRepository implements IUserRepository {
 
     @Override
     public void insertUser(User user) {
-
         try (Connection connection = getConnection(); PreparedStatement ps = connection.prepareStatement(INSERT_USERS_SQL)) {
             ps.setString(1, user.getName());
             ps.setString(2, user.getEmail());
@@ -55,8 +52,6 @@ public class UserRepository implements IUserRepository {
         } catch (SQLException exception) {
             printSQLException(exception);
         }
-
-
         return user;
     }
 
@@ -110,10 +105,9 @@ public class UserRepository implements IUserRepository {
     public List<User> searchUserCountry(String keyword) {
         List<User> users = new ArrayList<>();
         Connection connection = getConnection();
-        System.out.println(keyword);
         try {
             PreparedStatement ps = connection.prepareStatement(SEARCH_USER_COUNTRY_SQL);
-            ps.setString(1, "%"+keyword+"%");
+            ps.setString(1, "%" + keyword + "%");
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 int id = rs.getInt("id");
