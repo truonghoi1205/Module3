@@ -106,3 +106,58 @@ having sl = (
 	) as a
 );
 
+select b.title from books b
+left join borrows br
+on br.bookId = b.id 
+where br.bookId is null
+group by b.id;
+
+select distinct count(br.id) as sl, s.name from students s
+join borrows br
+on br.studentId = s.id
+group by s.id
+order by sl desc;
+
+select count(s.id) as sl, s.name from students s
+join borrows br
+on br.studentId = s.id
+group by s.id 
+having sl = ( 
+		select max(sl) from (
+        select count(studentId) as sl 
+        from borrows
+        group by studentId
+	) as a
+);
+
+
+create index index_title 
+on books(title);
+
+create view view_book as
+select b.title, count(br.id) as borrow_count
+from books b
+join borrows br 
+on b.id = br.bookId
+group by b.id;
+
+DELIMITER $$
+create procedure AddNewBook(
+    in title varchar(255),
+    in page_size int,
+    in authorId int,
+    in categoryId int
+)
+BEGIN
+    INSERT INTO Books (title, page_size, categoryId, authorId)
+    VALUEs (title, page_size, categoryId, authorId);
+END $$
+
+DELIMITER ;
+
+call AddNewBook( "fff",10,1,1)
+
+
+
+
+
