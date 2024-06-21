@@ -16,7 +16,7 @@ public class AuthorRepo implements IAuthorRepo{
     public List<Author> selectAllAuthor() throws SQLException {
         List<Author> authors = new ArrayList<>();
         Connection connection = new ConnectDB().getConnection();
-        String sql = "select * from author";
+        String sql = "select * from authors";
         PreparedStatement ps = connection.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {

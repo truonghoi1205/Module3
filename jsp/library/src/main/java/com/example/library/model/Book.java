@@ -1,5 +1,7 @@
 package com.example.library.model;
 
+import java.util.HashMap;
+
 public class Book {
     private int id;
     private String title;
@@ -7,6 +9,7 @@ public class Book {
     private int authorId;
     private Author author;
     private int categoryId;
+    private HashMap<String, String> errors = new HashMap<>();
 
     private Category category;
 
@@ -66,5 +69,12 @@ public class Book {
         this.categoryId = categoryId;
     }
 
+    public HashMap<String, String> getErrors() {
+        return errors;
+    }
+
+    public void setError(String key, String message) {
+        errors.put(key, message);
+    }
 
 }

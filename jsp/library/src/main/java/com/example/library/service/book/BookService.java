@@ -19,4 +19,40 @@ public class BookService implements IBookService{
             throw new RuntimeException(e);
         }
     }
+
+    @Override
+    public void deleteBook(int id) {
+        try {
+            bookRepo.deleteBook(id);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public void insertBook(Book book) {
+        try {
+            bookRepo.insertBook(book);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public void update(Book book) {
+        try {
+            bookRepo.updateBook(book);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public Book selectBook(int id) {
+        try {
+            return bookRepo.selectBook(id);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

@@ -1,3 +1,5 @@
+create database library;
+
 use library;
 
 create table students(
@@ -23,8 +25,8 @@ title varchar(255),
 page_size int,
 categoryId int,
 authorId int,
-foreign key (categoryId) references category(id),
-foreign key (authorId) references authors(id)
+foreign key (categoryId) references category(id) on delete cascade,
+foreign key (authorId) references authors(id) on delete cascade
 );
 
 create table borrows(
@@ -33,8 +35,8 @@ borrow_date date,
 return_date date,
 studentId int,
 bookId int,
-foreign key (studentId) references students(id),
-foreign key (bookId) references books(id)
+foreign key (studentId) references students(id) on delete cascade,
+foreign key (bookId) references books(id) on delete cascade
 );
 
 insert into category(name) values('Tự nhiên'),
