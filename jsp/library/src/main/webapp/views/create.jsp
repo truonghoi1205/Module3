@@ -45,6 +45,9 @@
                                 value="${item.id}">${item.name}</option>
                     </c:forEach>
                 </select>
+                <div>
+                    agitasadas
+                </div>
                 <c:if test="${not empty errorMessage}">
                     <div class="alert alert-danger">${errorMessage}</div>
                 </c:if>
