@@ -85,7 +85,6 @@ public class BooksController extends HttpServlet {
             case "update":
 
                     update(req, resp);
-
                 break;
             default:
                 showList(req, resp);
