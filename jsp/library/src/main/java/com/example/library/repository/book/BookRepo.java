@@ -5,10 +5,7 @@ import com.example.library.model.Author;
 import com.example.library.model.Book;
 import com.example.library.model.Category;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,8 +22,10 @@ public class BookRepo implements IBookRepo {
             book.setId(rs.getInt("id"));
             book.setTitle(rs.getString("title"));
             book.setPageSize(rs.getInt("page_size"));
+
             Category category = new Category();
             category.setName(rs.getString("category_name"));
+
             Author author = new Author();
             author.setName(rs.getString("author_name"));
             book.setAuthor(author);
@@ -39,22 +38,22 @@ public class BookRepo implements IBookRepo {
     @Override
     public void deleteBook(int id) throws SQLException {
         Connection connection = new ConnectDB().getConnection();
-        String sql = "delete from books where id = ?";
-        PreparedStatement ps = connection.prepareStatement(sql);
-        ps.setInt(1, id);
-        ps.executeUpdate();
+        String sql = "{call deleteBookById(?)}";
+        CallableStatement  statement  = connection.prepareCall(sql);
+        statement.setInt(1, id);
+        statement.executeUpdate();
     }
 
     @Override
     public void insertBook(Book book) throws SQLException {
         Connection connection = new ConnectDB().getConnection();
-        String sql = "insert into books(title,page_size,categoryId,authorId) value(?,?,?,?)";
-        PreparedStatement ps = connection.prepareStatement(sql);
-        ps.setString(1, book.getTitle());
-        ps.setInt(2, book.getPageSize());
-        ps.setInt(3, book.getCategoryId());
-        ps.setInt(4, book.getAuthorId());
-        ps.executeUpdate();
+        String sql = "{call AddNewBook(?,?,?,?)}";
+        CallableStatement statement  = connection.prepareCall(sql);
+        statement.setString(1, book.getTitle());
+        statement.setInt(2, book.getPageSize());
+        statement.setInt(3, book.getCategoryId());
+        statement.setInt(4, book.getAuthorId());
+        statement.executeUpdate();
     }
 
     @Override

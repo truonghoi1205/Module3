@@ -142,23 +142,32 @@ from books b
 join borrows br 
 on b.id = br.bookId
 group by b.id;
-
-DELIMITER $$
+-- procedure thêm sách
+DELIMITER //
 create procedure AddNewBook(
     in title varchar(255),
     in page_size int,
     in authorId int,
     in categoryId int
 )
-BEGIN
-    INSERT INTO Books (title, page_size, categoryId, authorId)
-    VALUEs (title, page_size, categoryId, authorId);
-END $$
+begin
+    insert into Books (title, page_size, categoryId, authorId)
+    values (title, page_size, categoryId, authorId);
+end //
 
 DELIMITER ;
+-- procedure xóa sách
+DELIMITER //
 
-call AddNewBook( "fff",10,1,1)
+create procedure deleteBookById(
+    in bookId int
+)
+begin
+    delete from books where id = bookId;
+end;
+//
 
+DELIMITER ;
 
 
 
