@@ -44,7 +44,7 @@ public class LoginServlet extends HttpServlet {
             req.setAttribute("message", "admin đăng nhập thành công vào lúc " + currentTime);
             req.getRequestDispatcher("/success.jsp").forward(req, resp);
         } else {
-            req.setAttribute("errorMessage", "tên đăng nhập hoặc mật khẩu không đúng.");
+            req.setAttribute("errorMessage", "Tên đăng nhập hoặc mật khẩu không đúng.");
             req.getRequestDispatcher("/login.jsp").forward(req, resp);
         }
     }
