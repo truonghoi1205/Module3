@@ -2,10 +2,16 @@ package com.example.codegym_student;
 
 public class Student {
     private int id;
-    private String code;
     private String name;
     private String gender;
     private double point;
+
+    public Student(int id, String name, String gender, double point) {
+        this.id = id;
+        this.name = name;
+        this.gender = gender;
+        this.point = point;
+    }
 
     public int getId() {
         return id;
@@ -13,14 +19,6 @@ public class Student {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
     }
 
     public String getName() {
@@ -47,5 +45,10 @@ public class Student {
         this.point = point;
     }
 
-
+    public String getGrade() {
+        if (point >= 90) return "Giỏi";
+        if (point >= 80) return "Khá";
+        if (point >= 60) return "Trung bình";
+        return "Yếu";
+    }
 }

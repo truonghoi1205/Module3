@@ -41,7 +41,7 @@ public class LoginServlet extends HttpServlet {
         String password = req.getParameter("password");
         if (username.equals("admin") && password.equals("123abc")) {
             String currentTime = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy").format(new Date());
-            req.setAttribute("message", "admin đăng nhập thành công vào lúc " + currentTime);
+            req.setAttribute("message", "Admin đăng nhập thành công vào lúc " + currentTime);
             req.getRequestDispatcher("/success.jsp").forward(req, resp);
         } else {
             req.setAttribute("errorMessage", "Tên đăng nhập hoặc mật khẩu không đúng.");

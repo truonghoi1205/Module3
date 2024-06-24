@@ -28,18 +28,16 @@
             </c:if>
             <div class="mb-3">
                 <label class="form-label">Username</label>
-                <input type="text" placeholder="input username" name="username" class="form-control">
+                <input type="text" placeholder="Enter username" name="username" class="form-control">
             </div>
             <div class="mb-3">
                 <label class="form-label">Password</label>
-                <input type="password" placeholder="input password" name="password" class="form-control">
+                <input type="password" placeholder="Enter password" name="password" class="form-control">
             </div>
             <button class="btn btn-secondary mt-2">Đăng nhập</button>
         </form>
     </div>
 
 </div>
-
-
 </body>
 </html>
